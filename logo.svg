@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="技术瓜内盘快买">
+  <!-- 技术瓜内盘快买：西瓜 + 内盘联合曲线 + 闪电（快买），BNB 金 -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16232e"/>
+      <stop offset="1" stop-color="#090c11"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe58a"/>
+      <stop offset="1" stop-color="#f0b90b"/>
+    </linearGradient>
+    <linearGradient id="flesh" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff5a6e"/>
+      <stop offset="1" stop-color="#d9304a"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <!-- 内盘联合曲线：越买越陡 -->
+  <path d="M14 60 C 52 60, 86 52, 114 14" fill="none" stroke="#2ebd85" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+  <circle cx="114" cy="14" r="4" fill="#2ebd85" opacity="0.8"/>
+  <!-- 西瓜切片：瓜皮 / 白瓤 / 红瓤 -->
+  <path d="M12 64 A52 52 0 0 0 116 64 Z" fill="#1f9d63"/>
+  <path d="M12 64 A52 52 0 0 0 116 64" fill="none" stroke="#0f6b40" stroke-width="3"/>
+  <path d="M19 64 A45 45 0 0 0 109 64 Z" fill="#eaf7ec"/>
+  <path d="M23 64 A41 41 0 0 0 105 64 Z" fill="url(#flesh)"/>
+  <g fill="#14161a">
+    <ellipse cx="40" cy="76" rx="2.6" ry="4" transform="rotate(-25 40 76)"/>
+    <ellipse cx="88" cy="76" rx="2.6" ry="4" transform="rotate(25 88 76)"/>
+    <ellipse cx="52" cy="92" rx="2.6" ry="4" transform="rotate(-15 52 92)"/>
+    <ellipse cx="76" cy="92" rx="2.6" ry="4" transform="rotate(15 76 92)"/>
+    <ellipse cx="64" cy="100" rx="2.4" ry="3.6"/>
+  </g>
+  <!-- 闪电：从瓜里冲出来 -->
+  <path d="M74 6 L40 54 L60 54 L50 92 L90 38 L69 38 L82 6 Z" fill="url(#bolt)" stroke="#090c11" stroke-width="4" stroke-linejoin="round"/>
+</svg>
