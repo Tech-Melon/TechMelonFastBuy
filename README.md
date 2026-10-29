@@ -1,6 +1,6 @@
 # 技术瓜内盘快买 · Tech Melon FastBuy
 
-<img src="logo.svg" width="96" alt="技术瓜内盘快买" />
+<img src="logo.svg" width="96" alt="技术瓜内盘快买">
 
 基于 **Binance Agentic Wallet**（币安官方 `@binance/agentic-wallet` CLI）的本地交易控制台 + 浏览器插件。
 粘贴或在网页上识别一个 BSC 合约地址（CA），自动判断它在哪个平台，点一下金额就买、点一下比例就卖：
@@ -11,6 +11,16 @@
 交易都由币安钱包服务签名广播，**控制台和插件都不接触私钥 / 助记词**。
 
 > 本项目不是币安官方产品。内盘新币风险很高（未审计、可能被抢先或归零），只用能承受损失的资金，先小额试用。
+
+
+## 下载
+
+| 文件 | 说明 | sha256 |
+|---|---|---|
+| [techmelon-fastbuy-lite-20261029-e6cad25.zip](techmelon-fastbuy-lite-20261029-e6cad25.zip) | 控制台轻量版（e6cad25） | `35efcff365bec373eb0c955121388567b2e2671316fe6306414422c1650c07a0` |
+| [techmelon-fastbuy-extension-0.6.4-e6cad25.zip](techmelon-fastbuy-extension-0.6.4-e6cad25.zip) | 浏览器插件 0.6.4 | `58ceabc6ad5362112c4a265a4728c508c18df65a83bdecdbc887db1771a95ba4` |
+
+下载后可用 `Get-FileHash <文件> -Algorithm SHA256` 核对。
 
 ## 两个版本
 
@@ -44,6 +54,7 @@
 8. **（可选）装插件**：见下方「浏览器插件」。
 
 做完这些就能用了。每一步的细节和所有配置项见 `DEPLOY.md`，各页面怎么用见 `docs/USAGE.md`。
+想开启免确认的直接买入、用报价币库存走极速通道、配私有节点和各种 Key，按 `DEPLOY.md` 第 18 节一步步做，**打开前先读 18.6 风险汇总**。
 
 ## 浏览器插件
 
@@ -62,6 +73,7 @@
 | 想做什么 | 看哪里 |
 |---|---|
 | 安装、启动、登录、所有配置项、公网部署、升级、常见问题 | `DEPLOY.md` |
+| 开启直接买入、极速通道、私有节点、Key 配置，以及每项的风险 | `DEPLOY.md` 第 18 节 |
 | 每个页面怎么用、常用操作流程 | `docs/USAGE.md` |
 | 项目怎么组织、一笔交易怎么走完、数据存在哪 | `docs/ARCHITECTURE.md` |
 | 哪些操作必须逐笔确认、每种自动化的边界 | `docs/AUTOMATION_RULES.md` |
@@ -76,13 +88,6 @@
 - 服务默认只监听 `127.0.0.1`；放到服务器上远程访问必须按 `DEPLOY.md` 第 12 节配 HTTPS、IP 白名单和登录密码。
 - 每一笔交易都先经币安模拟（preview），再按你确认过的计划执行；自动化功能必须先确认一份有上限、有有效期的「预授权」。
 - 顶部状态条的「⛔ 全部解除」一键关闭所有自动化。
+- 直接买入、插件卖出免确认、买入后自动授权、无上限授权这些开关会放大误操作和合约风险，每项的最坏情况和对策见 `DEPLOY.md` 18.6。
+- 浏览器插件配对密钥等同快捷交易权限，只在自己的浏览器里配对，怀疑泄露就在设置页「取消配对」。
 - `webui/config.json`、`profiles/`、`webui/journal*.jsonl` 等是你的私人数据（节点令牌、API Key、登录会话、交易记录），不要发给任何人。
-
-## 下载
-
-| 文件 | 说明 |
-|---|---|
-| [`techmelon-fastbuy-lite-20261029-388046f.zip`](techmelon-fastbuy-lite-20261029-388046f.zip) | 控制台（轻量版），解压后从包里的 `README.md` 开始 |
-| [`techmelon-fastbuy-extension-0.6.4-388046f.zip`](techmelon-fastbuy-extension-0.6.4-388046f.zip) | 浏览器插件，解压后「加载已解压的扩展程序」 |
-
-每个 zip 附 `.sha256`：`certutil -hashfile <文件> SHA256`（Windows）或 `sha256sum <文件>`。Pro（全量版，含狙击 / 打新）不在这里公开发布。
