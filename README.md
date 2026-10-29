@@ -82,7 +82,7 @@
 
 | 文件 | 说明 |
 |---|---|
-| [`techmelon-fastbuy-lite-20261029-fc62671.zip`](techmelon-fastbuy-lite-20261029-fc62671.zip) | 控制台（轻量版），解压后从包里的 `README.md` 开始 |
-| [`techmelon-fastbuy-extension-0.6.2-fc62671.zip`](techmelon-fastbuy-extension-0.6.2-fc62671.zip) | 浏览器插件，解压后「加载已解压的扩展程序」 |
+| [`techmelon-fastbuy-lite-20261029-76dc551.zip`](techmelon-fastbuy-lite-20261029-76dc551.zip) | 控制台（轻量版），解压后从包里的 `README.md` 开始 |
+| [`techmelon-fastbuy-extension-0.6.2-76dc551.zip`](techmelon-fastbuy-extension-0.6.2-76dc551.zip) | 浏览器插件，解压后「加载已解压的扩展程序」 |
 
 每个 zip 附 `.sha256`：`certutil -hashfile <文件> SHA256`（Windows）或 `sha256sum <文件>`。Pro（全量版，含狙击 / 打新）不在这里公开发布。
